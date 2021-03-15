@@ -1,0 +1,67 @@
+:root {
+  --searchbox-size: 60px;
+  --searchbox-length: 70vw;
+}
+
+.search {
+  margin-top: 15%;
+}
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 5%;
+}
+
+.searchbox {
+  z-index: 10;
+  position: fixed;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #262626;
+  /* height: 80px; */
+  border-radius: var(--searchbox-size);
+  padding: 10px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+.searchbox a {
+  color: black;
+  width: var(--searchbox-size);
+  height: var(--searchbox-size);
+  background: white;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: calc(var(--searchbox-size) * 0.6);
+}
+
+.searchbox input {
+  border: none;
+  background: none;
+  outline: none;
+  color: white;
+  font-size: 120%;
+  padding: 0;
+  margin: 0;
+  width: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.searchbox:hover > input {
+  width: var(--searchbox-length);
+  padding: 0 12px;
+  margin: 0;
+}
+
+.searchbox:hover > a {
+  background: transparent;
+  color: gray;
+}
